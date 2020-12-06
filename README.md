@@ -1,0 +1,2 @@
+# Faster
+ Typing Speed Calculator

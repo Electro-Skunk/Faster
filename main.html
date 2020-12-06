@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elcom-Taja-yeonsb</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>FASTER</h1>
+        <div>
+            <input id="word" type="radio" name="select" checked="checked"></input>
+            <label for="word">word</label>
+            <input id="sectence" type="radio" name="select"></input>
+            <label for="sectence">sectence</label>
+            <input id="paragraph" type="radio" name="select"></input>
+            <label for="paragraph">paragraph</label>
+            <input id="chapter" type="radio" name="select"></input>
+            <label for="chapter">chapter</label>
+        </div>
+    </header>
+    <section>
+        <div>
+            <p id="example">example</p>
+        </div>
+        <input id="answer" type="text" value="Type here and press Enter"></input>
+    </section>
+    <footer>
+        <button id="e" class="result">Click!</button>
+        <div class="result">
+            <p>accuracy<span>record</span></p>
+            <p class="accuracy">100%<span id="record">200</span></p>
+        </div>
+        <div class="result">
+            <p>wpm<span>highest</span></p>
+            <p id="wpm">100<span id="wpm_h">200</span></p> <!-- (타수-백스페이스)/5 / 60초 -->
+        </div>
+        <div class="result">
+            <p">cpm<span>highest</span></p>
+                <p id="cpm">100<span id="cpm_h">200</span></p> <!-- (타수-백스페이스) / 60초 -->
+        </div>
+    </footer>
+</body>
+
+</html>
