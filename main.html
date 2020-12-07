@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elcom-Taja-yeonsb</title>
+    <title>Typing FASTER!</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <h1>FASTER</h1>
+        <a href="https://electroskunk.tistory.com"><h1 id="e" title="by Electro Skunk">FASTER</h1></a>
         <div>
             <input id="word" type="radio" name="select" checked="checked"></input>
             <label for="word">word</label>
@@ -32,18 +32,25 @@
         <input id="answer" type="text" value="Type here and press Enter"></input>
     </section>
     <footer>
-        <button id="e" class="result">Click!</button>
         <div class="result">
-            <p>accuracy<span>record</span></p>
-            <p class="accuracy">100%<span id="record">200</span></p>
+            <p class="name" title="">CPM</p>
+            <p class="value" id="cpm"></p>
         </div>
         <div class="result">
-            <p>wpm<span>highest</span></p>
-            <p id="wpm">100<span id="wpm_h">200</span></p> <!-- (타수-백스페이스)/5 / 60초 -->
+            <p class="name" title="">gross WPM</p>
+            <p class="value" id="grossWpm"></p>
         </div>
         <div class="result">
-            <p">cpm<span>highest</span></p>
-                <p id="cpm">100<span id="cpm_h">200</span></p> <!-- (타수-백스페이스) / 60초 -->
+            <p class="name" title="">net WPM</p>
+            <p class="value" id="netWpm"></p>
+        </div>
+        <div class="result">
+            <p class="name" title="">highest</p>
+            <p class="value" id="highest"></p>
+        </div>
+        <div class="result">
+            <p class="name" title="">accuracy</p>
+            <p class="value" id="accuracy"></p>
         </div>
     </footer>
 </body>

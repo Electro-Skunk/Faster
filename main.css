@@ -17,8 +17,15 @@ body {
     background-repeat: no-repeat;
 }
 
-
 /* header */
+
+header a {
+    text-decoration: none;
+}
+
+header a:visited {
+    color: black;
+}
 
 header h1 {
     padding: 1vh 0;
@@ -28,20 +35,32 @@ header h1 {
     transform: skewX(-10deg);
 }
 
-header input {
-    display: none;
+header a:hover {
+    text-shadow: 5px 0 #fddb3a;
+    text-shadow: -5px 0 #fddb3a;
+    text-shadow: 0 5px #fddb3a;
+    text-shadow: 0 -5px #fddb3a;
 }
 
+header div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-header input:checked + label {
-    font-style: italic;
-    font-weight: bold;
+header input {
+    display: none;
 }
 
 header label {
     margin: 0 30px;
     font-size: 20px;
     border-bottom: 1px solid black;
+}
+
+header input:checked+label {
+    font-style: italic;
+    font-weight: bold;
 }
 
 header label:hover {
@@ -91,12 +110,13 @@ section div {
 footer {
     margin: 0 auto;
     font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 footer .result {
-    width: 15%;
-    float: right;
-    margin-left: 6vw;
+    margin: 0 3vw;
 }
 
 footer p {
@@ -104,21 +124,10 @@ footer p {
     margin-bottom: 1vh;
 }
 
-footer span {
-    padding-left: 10px;
+.name {
     font-weight: bold;
+}
+
+.value {
     font-style: italic;
-}
-
-footer #e {
-    width: 10vh;
-    height: 10vh;
-    float: right;
-    background-color: transparent;
-    border: 2px solid transparent;
-    border-radius: 100px;
-}
-
-footer #e:hover {
-    background-color: #fddb3a;
 }
