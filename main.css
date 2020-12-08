@@ -19,11 +19,8 @@ body {
 
 /* header */
 
-header a {
+header a, a:visited, a:active {
     text-decoration: none;
-}
-
-header a:visited {
     color: black;
 }
 

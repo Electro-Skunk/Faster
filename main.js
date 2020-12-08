@@ -1,30 +1,27 @@
-window.onload = function() {
+window.onload = function () {
     let questionBox = document.getElementById("example");
     let question = questionBox.innerHTML;
     let answerBox = document.getElementById("answer");
+    let timer = false;
+    let startTime;
+    let endTime;
+    let highest;
 
     // 입력 창 글자 수 제한
     answerBox.maxlength = question.length;
 
     // 입력 창 포커스되면 기본값 글자 지우기
-    answerBox.addEventListener("focus", function() {
+    answerBox.addEventListener("focus", function () {
         answerBox.value = "";
     }, false);
 
     // 메인 이벤트
-    answerBox.addEventListener("keydown", function(event) {
-        let timer = false
-        let startTime
-        let endTime;
-        let highest;
+    answerBox.addEventListener("keydown", function (event) {
 
         // 타이머 시작
         if (event.code != "Enter" && timer == false) {
             timer = true;
             startTime = new Date().getTime();
-            console.log("startTime =", startTime);
-
-            
         }
 
         // 엔터키 눌리면
@@ -47,20 +44,17 @@ window.onload = function() {
                 }
             }
 
-
-
             // 결과 계산
-            let cpm = (answer.length) * (6000 / ms);
-            let grossWpm = (answer.length / 5) * (6000 / ms);
-            let netWpm = ((answer.length / 5) - errors) * (6000 / ms);
-            if (netWpm >= highest) {
+            let cpm = parseInt((answer.length) * (6000 / ms));
+            let grossWpm = parseInt((answer.length / 5) * (6000 / ms));
+            let netWpm = parseInt(((answer.length / 5) - errors) * (6000 / ms));
+            if (highest == undefined || netWpm >= highest) {
                 highest = netWpm;
             }
             let accuracy = parseInt((1 - (errors / question.length)) * 100);
-            if (accuracy < 0)
 
-                // 결과 출력
-                document.getElementById("cpm").innerHTML = cpm;
+            // 결과 출력
+            document.getElementById("cpm").innerHTML = cpm;
             document.getElementById("grossWpm").innerHTML = grossWpm;
             document.getElementById("netWpm").innerHTML = netWpm;
             document.getElementById("highest").innerHTML = highest;
