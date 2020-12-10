@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
     font-family: 'Georgia', serif;
     text-align: center;
-    overflow: hidden;
+    overflow: auto;
     background-image: url("./skunk_no_bg-1300-700.png");
     background-position-x: center;
     background-position-y: bottom;
@@ -19,17 +19,10 @@ body {
 
 /* header */
 
-header a, a:visited, a:active {
+header a, a:visited {
+    padding: 1vw;
     text-decoration: none;
     color: black;
-}
-
-header h1 {
-    padding: 1vh 0;
-    font-size: 32px;
-    font-style: italic;
-    font-family: 'Black Han Sans', sans-serif;
-    transform: skewX(-10deg);
 }
 
 header a:hover {
@@ -39,14 +32,38 @@ header a:hover {
     text-shadow: 0 -5px #fddb3a;
 }
 
-header div {
+header h1 {
+    padding: 1vh;
+    font-size: 32px;
+    font-style: italic;
+    font-family: 'Black Han Sans', sans-serif;
+    transform: skewX(-10deg);
+}
+
+fieldset {
+    border: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+legend {
+    width: 0;
+    height: 0;
+    text-indent: -9000px;
+    overflow: hidden;
+}
+
 header input {
-    display: none;
+    width: 0;
+    height: 0;
+    text-indent: -9000px;
+    overflow: hidden;
+}
+
+header input:focus + label {
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 header label {
@@ -70,37 +87,31 @@ section {
     background-color: transparent;
 }
 
-section div {
+section textarea {
     width: 95%;
     height: 25vh;
     margin: 3vh auto;
     padding: 2vh;
     background-color: transparent;
-    border: 2px solid black;
-    font-size: 16px;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#example {
-    margin: 0;
-    padding: 0;
-}
-
-#answer {
-    width: 95%;
-    height: 25vh;
-    margin: 3vh auto;
-    padding: 2vh;
-    background-color: transparent;
-    border: 2px solid black;
-    overflow: auto;
+    border: 2px dashed black;
     font-size: 16px;
     text-align: center;
+    line-height: 25vh;
     font-family: 'Georgia', serif;
 }
+
+#copyright {
+    margin: 0;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+/*
+입력 시 글자가 위로 올라가며 사라지고 아래에서 새 글자가 올라오는 애니메이션 추가 예정 
+단어와 문장은 올라가면 사라지고
+짧은 이야기는 위아래 문장이 살짝 투명하게 보이도록 설정(글자 크기 조금 작게)
+슬롯머신 돌아가는 것처럼 효과주기
+*/
 
 /* footer */
 

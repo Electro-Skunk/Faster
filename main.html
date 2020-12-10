@@ -13,23 +13,21 @@
 
 <body>
     <header>
-        <a href="https://electroskunk.tistory.com"><h1 id="e" title="by Electro Skunk">FASTER</h1></a>
-        <div>
-            <input id="word" type="radio" name="select" checked="checked"></input>
-            <label for="word">word</label>
-            <input id="sectence" type="radio" name="select"></input>
-            <label for="sectence">sectence</label>
-            <input id="paragraph" type="radio" name="select"></input>
-            <label for="paragraph">paragraph</label>
-            <input id="chapter" type="radio" name="select"></input>
-            <label for="chapter">chapter</label>
-        </div>
+        <h1 id="e" title="go to developer blog"><a href="https://electroskunk.tistory.com">FASTER</a></h1>
+        <fieldset>
+            <legend>Select Text Length</legend>
+            <input id="words" type="radio" name="radio"></input>
+            <label for="words">words</label>
+            <input id="sentences" type="radio" name="radio"></input>
+            <label for="sentences">sentences</label>
+            <input id="paragraphs" type="radio" name="radio"></input>
+            <label for="paragraphs">paragraphs</label>
+        </fieldset>
     </header>
     <section>
-        <div>
-            <p id="example">example</p>
-        </div>
-        <input id="answer" type="text" value="Type here and press Enter"></input>
+        <textarea id="example" readonly="readonly">example</textarea>
+        <a id="copyright" href="https://lipsum.com/">text from lipsum.com</a>
+        <textarea id="answer" type="text" placeholder="Type here and press Enter" autocomplete="off"></textarea>
     </section>
     <footer>
         <div class="result">
