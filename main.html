@@ -13,20 +13,23 @@
 
 <body>
     <header>
-        <h1 id="e" title="go to developer blog"><a href="https://electroskunk.tistory.com">FASTER</a></h1>
+        <h1 id="e"><a href="main.html">FASTER</a></h1>
         <fieldset>
             <legend>Select Text Length</legend>
-            <input id="words" type="radio" name="radio"></input>
-            <label for="words">words</label>
-            <input id="sentences" type="radio" name="radio"></input>
-            <label for="sentences">sentences</label>
-            <input id="paragraphs" type="radio" name="radio"></input>
-            <label for="paragraphs">paragraphs</label>
+            <input id="word" type="radio" name="radio" checked="checked"></input>
+            <label for="word">words</label>
+            <input id="sentence" type="radio" name="radio"></input>
+            <label for="sentence">sentences</label>
+            <input id="paragraph" type="radio" name="radio"></input>
+            <label for="paragraph">paragraphs</label>
         </fieldset>
     </header>
     <section>
-        <textarea id="example" readonly="readonly">example</textarea>
-        <a id="copyright" href="https://lipsum.com/">text from lipsum.com</a>
+        <textarea id="question" readonly="readonly">Tipdadadatadadip</textarea>
+        <div>
+            <a id="copyright" href="https://electroskunk.tistory.com/">by Electro Skunk</a>
+        </div>
+        <p id="timer">waiting...</p>
         <textarea id="answer" type="text" placeholder="Type here and press Enter" autocomplete="off"></textarea>
     </section>
     <footer>
